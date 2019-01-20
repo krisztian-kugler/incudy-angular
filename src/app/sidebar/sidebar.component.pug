@@ -1,0 +1,15 @@
+.placeholder(*ngIf="content === 'placeholder'")
+  p.cta Select a day to display events
+
+.events(*ngIf="content === 'events'")
+  .header {{ day }}
+    button.add((click)="onAdd()") Add
+  .content(*ngIf="events.length > 0")
+    .scroll-wrapper
+      .event(*ngFor="let event of events")
+        .title {{ event.title }}
+        .description {{ event.description }}
+        .remove((click)="onRemove(event.id)") X
+  .no-content(*ngIf="events.length === 0")
+    p.cta No events on this date
+    button.button.add((click)="onAdd()") Add event

@@ -1,0 +1,4 @@
+.content-wrapper
+  app-calendar
+  app-sidebar((openModal)="showModal = true")
+app-modal(*ngIf="showModal", (destroy)="showModal = false")

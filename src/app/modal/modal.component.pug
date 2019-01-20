@@ -1,0 +1,10 @@
+.modal-wrapper
+  .header Add event
+  form((ngSubmit)="onSubmit(form)", #form="ngForm")
+    input(type="text", name="title", placeholder="Title *", required, ngModel)
+    textarea(name="description", placeholder="Description", ngModel)
+    p.required * Required
+    .button-bar
+      button.button.submit(type="submit", [disabled]="form.invalid") Add
+      .button((click)="closeModal()") Cancel
+  

@@ -1,0 +1,5 @@
+.header {{ title.month }} {{ title.year }}
+.days-in-week
+  .day(*ngFor="let day of daysInWeek") {{ day | uppercase }}
+.week(*ngFor="let week of month")
+  app-day(*ngFor="let day of week", [ngClass]="{blank: day === null, selected: day === selectedDay}", [day]="day", (click)="onSelect(day)")
