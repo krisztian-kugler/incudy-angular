@@ -1,27 +1,19 @@
 # Event Calendar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+Live version of this project is available [here](https://krisztian-kugler.github.io/incudy-angular).
 
-## Development server
+## Used technologies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Angular 7
+* RxJS
+* Pug
+* Sass
 
-## Code scaffolding
+## Notes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Date is set to september 2019 by default, but it's managed dynamically in the code and can be set to any year/month by changing just 2 input parameters.
+* Events can be added via a simple modal form (with basic validation). The "name" field is required and the form cannot be submitted without it.
+* You can add as many events as wish to a given date. In case of too many events, the list becomes scrollable. The scrollbar itself is hidden by a little CSS-trick but the functionality is there.
+* The number of events for a given date is display in the calendar.
+* Events can be removed by clicking the "X" in the upper right corner.
+* I also paid attention to the UI design. Nothing revolutionary, just a flat, minimalistic interface. :)
